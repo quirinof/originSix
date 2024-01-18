@@ -8,12 +8,16 @@ a {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-  height: auto;
+:root {
+  --primary-color: hsla(36, 100%, 57%, 1);
+  --second-color: hsla(36, 94%, 79%, 1);
+  --background-2: hsla(0, 0%, 100%, 1);
+  --background-1: hsla(0, 0%, 98%, 1);
+  --dark-color: hsla(36, 55%, 12%, 1);
 }
 
-:root {
+body {
+  background: var(--background-1);
 }
 
 #header {
@@ -26,8 +30,19 @@ nav {
   justify-content: space-between;
 }
 
-.logo {
+nav a {
+  color: var(--dark-color);
+  font-size: 21px;
+  font-weight: bold;
+}
 
+nav span {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -36,6 +51,8 @@ nav {
   margin-right: 1.5rem;
 }
 
-section {
+h1 {
   font-family: 'DM Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
