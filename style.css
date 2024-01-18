@@ -18,6 +18,7 @@ img {
 
 #header {
   height: 4.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -33,4 +34,8 @@ nav {
   width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+section {
+  font-family: 'DM Sans', sans-serif;
 }
