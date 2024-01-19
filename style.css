@@ -24,11 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 #header {
   border-bottom: 1px solid #E4E4E4;
 }
@@ -38,6 +33,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
 
 .logo {
@@ -55,14 +63,41 @@ nav {
   margin-right: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
 .section {
   padding: 5rem 0;
 }
 
-h1 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
+#home .container {
+  margin: 0;
 }
+
+#home .image {
+  position: relative;
+}
+
+#home .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--second-color);
+  position: absolute;
+  top: -16.8%;
+  right: -16.7%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
