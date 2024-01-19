@@ -24,35 +24,39 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#header {
-  height: 4.5rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-nav a {
-  color: var(--title-color);
-  font-size: 21px;
-  font-weight: bold;
-}
-
-nav span {
-  color: var(--primary-color);
-}
-
 img {
   width: 100%;
   height: auto;
+}
+
+#header {
+  border-bottom: 1px solid #E4E4E4;
+}
+
+nav {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--title-color);
+  font: bold 1.31rem 'Poppins', sans-serif;
+}
+
+.logo span {
+  color: var(--primary-color);
 }
 
 .container {
   width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
 }
 
 h1 {
