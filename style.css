@@ -9,15 +9,19 @@ a {
 }
 
 :root {
+  --title-color: hsla(36, 55%, 12%, 1);
   --primary-color: hsla(36, 100%, 57%, 1);
   --second-color: hsla(36, 94%, 79%, 1);
-  --background-2: hsla(0, 0%, 100%, 1);
-  --background-1: hsla(0, 0%, 98%, 1);
-  --dark-color: hsla(36, 55%, 12%, 1);
+  --body-color: hsla(0, 0%, 98%, 1);
+  --background-color: hsla(0, 0%, 100%, 1);
+  --text-color: hsla(0, 0%, 46%, 1);
 }
 
 body {
-  background: var(--background-1);
+  font-family: 'DM Sans', sans-serif;
+  background: var(--body-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
 }
 
 #header {
@@ -31,7 +35,7 @@ nav {
 }
 
 nav a {
-  color: var(--dark-color);
+  color: var(--title-color);
   font-size: 21px;
   font-weight: bold;
 }
@@ -55,4 +59,6 @@ h1 {
   font-family: 'DM Sans', sans-serif;
   font-size: 30px;
   font-weight: bold;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
