@@ -28,6 +28,15 @@ body {
 
 #header {
   border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
 }
 
 nav {
@@ -100,6 +109,10 @@ h1 {
   padding: 5rem 0;
 }
 
+#home {
+  overflow: hidden;
+}
+
 #home .container {
   margin: 0;
 }
@@ -141,4 +154,5 @@ h1 {
 
 #home .text p {
   margin-bottom: 2rem;
+  max-width: 100%;
 }
