@@ -11,6 +11,7 @@ a {
 :root {
   --title-color: hsla(36, 55%, 12%, 1);
   --primary-color: hsla(36, 100%, 57%, 1);
+  --primary-color-alt: hsla(25, 90%, 57%, 1);
   --second-color: hsla(36, 94%, 79%, 1);
   --body-color: hsla(0, 0%, 98%, 1);
   --background-color: hsla(0, 0%, 100%, 1);
@@ -59,6 +60,11 @@ h1 {
   padding: 0 2rem;
   border-radius: 0.25rem;
   font: 500 1rem  "DM Sans", sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var( --primary-color-alt);
 }
 
 .logo {
