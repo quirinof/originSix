@@ -67,6 +67,15 @@ h1 {
   background: var( --primary-color-alt);
 }
 
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg, #ff7b7b 0%, 
+    rgba(204, 244, 230, 0.34) 
+    100%
+  );
+}
+
 .logo {
   color: var(--title-color);
   font: bold 1.31rem 'Poppins', sans-serif;
