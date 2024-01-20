@@ -15,6 +15,7 @@ a {
   --body-color: hsla(0, 0%, 98%, 1);
   --background-color: hsla(0, 0%, 100%, 1);
   --text-color: hsla(0, 0%, 46%, 1);
+  --text-color-light: hsla(0, 0%, 98%, 1);
 }
 
 body {
@@ -46,6 +47,18 @@ h1 {
   font-weight: bold;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  padding: 14px 32px 15px 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem  "DM Sans";
 }
 
 .logo {
@@ -107,3 +120,10 @@ h1 {
   text-align: center;
 }
 
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
