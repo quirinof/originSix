@@ -1,3 +1,4 @@
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +9,79 @@ a {
   text-decoration: none;
 }
 
-:root {
-  --title-color: hsla(36, 55%, 12%, 1);
-  --primary-color: hsla(36, 100%, 57%, 1);
-  --primary-color-alt: hsla(25, 90%, 57%, 1);
-  --second-color: hsla(36, 94%, 79%, 1);
-  --body-color: hsla(0, 0%, 98%, 1);
-  --background-color: hsla(0, 0%, 100%, 1);
-  --text-color: hsla(0, 0%, 46%, 1);
-  --text-color-light: hsla(0, 0%, 98%, 1);
+img {
+  width: 100%;
+  height: auto;
 }
 
+/* ====== VARIABLES ====== */
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 27;
+  --base-color: hsl(var(--hue), 36%, 57%);
+  --base-color-second: hsl(var(--hue), 65%, 88%);
+  --base-color-alt: hsl(var(--hue), 57%, 53%);
+  --title-color: hsl(var(--hue), 41%, 10%);
+  --text-color: hsl(0, 0%, 46%);
+  --text-color-light: hsl(0, 0%, 98%);
+  --body-color: hsl(0, 0%, 98%);
+  --background-color: hsl(0, 0%, 100%);
+}
+
+/* ====== BASE ====== */
 body {
-  font-family: 'DM Sans', sans-serif;
+  font: 400 1rem 'DM Sans', sans-serif;
   background: var(--body-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem  "DM Sans", sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--base-color-alt);
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg, 
+    hsla(var(--hue), 36%, 57%, 1) 0%, 
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+
+/* ====== LAYOUT ====== */
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
 }
 
 #header {
@@ -40,75 +98,26 @@ body {
 }
 
 nav {
-  height: 4.5rem;
+  height: --header-height;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-h1 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
-}
-
-.button {
-  background-color: var(--primary-color);
-  color: var(--text-color-light);
-  height: 3.5rem;
-  padding: 14px 32px 15px 32px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 2rem;
-  border-radius: 0.25rem;
-  font: 500 1rem  "DM Sans", sans-serif;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background: var( --primary-color-alt);
-}
-
-.divider-1 {
-  height: 1px;
-  background: linear-gradient(
-    270deg, #ff7b7b 0%, 
-    rgba(204, 244, 230, 0.34) 
-    100%
-  );
-}
-
 .logo {
   color: var(--title-color);
-  font: bold 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem 'Poppins', sans-serif;
 }
 
 .logo span {
-  color: var(--primary-color);
+  color: var(--base-color);
 }
 
-.container {
-  width: 100%;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+main {
+  margin-top: var(--header-height);
 }
 
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.section {
-  padding: 5rem 0;
-}
-
+/* ====== HOME ====== */
 #home {
   overflow: hidden;
 }
@@ -125,7 +134,7 @@ h1 {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--second-color);
+  background: var(--base-color-second);
   position: absolute;
   top: -16.8%;
   right: -16.7%;
