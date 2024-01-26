@@ -68,8 +68,17 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg, 
-    hsla(var(--hue), 36%, 57%, 1) 0%, 
-    hsla(var(--hue), 65%, 88%, 0.34) 100%
+    hsla(var(--hue), 36%, 57%, 1), 
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg, 
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
   );
 }
 
@@ -256,7 +265,9 @@ nav.show div.icon-close {
 
 
 /* ====== ABOUT ====== */
-
+#about {
+  background: white;
+}
 #about .container {
   margin: 0;
 }
