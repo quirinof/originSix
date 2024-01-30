@@ -16,3 +16,17 @@ for(const link of links) {
     nav.classList.remove('show')
   })
 }
+
+/* mudar o header da página quando der scroll */
+const header = document.querySelector("header")
+const navHeight = header.offsetHeight
+
+window.addEventListener('scroll', function() {
+  if(window.scrollY >= navHeight) {
+    // scrol maior que altura do header
+    header.classList.add('scroll')
+  } else {
+    // menor que a alture do header
+    header.classList.remove('scroll')
+  }
+})
