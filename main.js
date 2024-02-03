@@ -42,6 +42,7 @@ const swiper = new Swiper('.swiper', {
   keyboard: true
 });
 
+
 /* ScrollReveal: Mostrar elementos quando der scroll na page */
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -59,3 +60,14 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
 )
+
+
+/* Button back-to-top */ 
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function() {
+  if(window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
