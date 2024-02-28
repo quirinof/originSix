@@ -549,6 +549,7 @@ footer .social a:hover {
 /* ====== MEDIA QUERIES ====== */
 /* extra large devices: 1200 > */  
 @media (min-width: 1200px) {
+  /* reusable classes */
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -559,6 +560,11 @@ footer .social a:hover {
     padding: 10rem 0;
   }
 
+  .button {
+    height: 3.125rem;
+  }
+
+  /* navigation */
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -578,9 +584,16 @@ footer .social a:hover {
     display: none;
   }
 
+  /* layout */
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /* home */
   #home .container {
     grid-auto-flow: column;
     justify-content: space-between;
+    margin: 0 auto;
   }
 
   #home .image {
@@ -589,10 +602,8 @@ footer .social a:hover {
   
   #home .text {
     order: 0;
-  }
-
-  main {
-    margin-top: var(--header-height);
+    max-width: 24rem;
+    text-align: left;
   }
 }
 /* large devices: 1023 > */  
